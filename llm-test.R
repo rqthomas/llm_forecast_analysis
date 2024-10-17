@@ -38,7 +38,7 @@ chat$register_tool(ToolDef(
 
 chat$chat("What is the max prediction for the variable Temp_C_mean and variable type is state?")
 
-q <- "SELECT MAX(prediction) FROM forecast WHERE variable_type = 'state' AND variable = 'Temp_C_mean'"
+q <- "SELECT MAX(prediction) FROM forecast WHERE variable = 'Temp_C_mean'"
 dbGetQuery(conn, q)
 
 
