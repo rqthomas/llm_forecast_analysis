@@ -8,6 +8,7 @@ conn <- dbConnect(duckdb(), dbdir = here("database.duckdb"), read_only = TRUE)
 
 system_prompt_str <- system_prompt(dbGetQuery(conn, "SELECT * FROM forecast"), "forecast")
 
+# Download llama3.2 here: https://ollama.com
 
 chat <- chat_ollama(
   system_prompt = system_prompt_str,
